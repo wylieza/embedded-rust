@@ -45,6 +45,9 @@ Reload rules
 
 
 ## Commands
+### List Chips
+```probe-rs chip list```
+
 ### Flash microbit
 ```cargo embed --chip nRF52833_xxAA```
 
