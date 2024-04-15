@@ -52,6 +52,12 @@ Reload rules
 ```cargo embed --chip nRF52833_xxAA```
 
 
+## Config
+
+### Embed.toml
+Created this file so I just have to call 'cargo embed' to flash my device.
+
+
 ## Issues
 ### USB Port
 I was using a USB 3 port and the device would not flash. Changing to an older port resolved this issue.
