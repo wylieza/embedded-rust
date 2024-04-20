@@ -26,11 +26,15 @@ fn init_heap() {
     }
 }
 
+fn initialize() {
+    init_heap();
+    rtt_init_print!();
+}
+
 #[entry]
 fn main() -> ! {
-    init_heap();
+    initialize();
 
-    rtt_init_print!();
     rprintln!("Hello my chickens! Lets get the temperature");
 
     let peripherals = hal::pac::Peripherals::take().unwrap();
@@ -39,7 +43,7 @@ fn main() -> ! {
     loop {
         temperature_storage.add(temperature::Temperature::new(temp.measure().to_num(), 0));
         delay_ms(100);
-        rprintln!("{:?} degrees C", temperature_storage.getLastAdded().unwrap_or(&temperature::Temperature{temperature_c: 0f32, timestamp_ms: 0}).temperature_c);
+        rprintln!("{:?} degrees C", temperature_storage.get_last_added().unwrap_or(&temperature::Temperature{temperature_c: 0f32, timestamp_ms: 0}).temperature_c);
     };
 
 }

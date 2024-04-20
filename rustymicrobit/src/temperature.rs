@@ -25,10 +25,10 @@ impl TemperatureStore {
     }
 
     pub fn add(&mut self, temperature: Temperature) {
-        self.readings.push(temperature);
+        self.readings.push(temperature)
     }
 
-    pub fn getLastAdded(&mut self) -> Option<&Temperature> {
+    pub fn get_last_added(&mut self) -> Option<&Temperature> {
         return self.readings.last();
     }
 }

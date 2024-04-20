@@ -50,6 +50,12 @@ Reload rules
 
 ### Flash microbit
 ```cargo embed --chip nRF52833_xxAA```
+```cargo embed```
+
+### Monitor RTT
+```probe-rs attach target/thumbv7em-none-eabihf/debug/rustymicrobit --chip nRF52833_xxAA```
+
+
 
 
 ## Config
