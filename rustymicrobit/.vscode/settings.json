@@ -1,4 +1,5 @@
 {
+    "rust_analyzer.cargo.target":"thumbv7em-none-eabihf",
     "rust_analyzer.check.allTargets": false,
-    "rust_analyzer.cargo.target":"thumbv7em-none-eabihf"
+    "rust-analyzer.cargo.allFeatures": false,
 }
