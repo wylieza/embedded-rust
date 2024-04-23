@@ -21,7 +21,7 @@ pub struct TemperatureStore {
 
 impl TemperatureStore {
     pub fn new() -> Self {
-        TemperatureStore {readings: Vec::new()}
+        TemperatureStore {readings: Vec::with_capacity(128)}
     }
 
     pub fn add(&mut self, temperature: Temperature) {

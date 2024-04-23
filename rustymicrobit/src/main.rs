@@ -40,10 +40,13 @@ fn main() -> ! {
     let peripherals = hal::pac::Peripherals::take().unwrap();
     let mut temp = hal::Temp::new(peripherals.TEMP);
     let mut temperature_storage = temperature::TemperatureStore::new();
+
+    let mut count = 0;
     loop {
         temperature_storage.add(temperature::Temperature::new(temp.measure().to_num(), 0));
-        delay_ms(100);
-        rprintln!("{:?} degrees C", temperature_storage.get_last_added().unwrap_or(&temperature::Temperature{temperature_c: 0f32, timestamp_ms: 0}).temperature_c);
+        delay_ms(10);
+        rprintln!("{:?} degrees C (sample number {})", temperature_storage.get_last_added().unwrap_or(&temperature::Temperature{temperature_c: 0f32, timestamp_ms: 0}).temperature_c, count);
+        count += 1;
     };
 
 }

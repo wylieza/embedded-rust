@@ -67,3 +67,10 @@ Created this file so I just have to call 'cargo embed' to flash my device.
 ## Issues
 ### USB Port
 I was using a USB 3 port and the device would not flash. Changing to an older port resolved this issue.
+
+
+
+## TODO
+### Crates
+https://docs.rs/embedded-graphics/latest/embedded_graphics/
+https://docs.rs/epd-waveshare/latest/epd_waveshare/
