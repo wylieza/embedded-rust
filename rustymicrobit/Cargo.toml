@@ -9,6 +9,7 @@ edition = "2021"
 cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
 cortex-m-rt = "0.7.3"
 embedded-alloc = "0.5.1"
+embedded-storage = "0.3.1"
 nrf52833-hal = {version = "0.17.1", features = ["rt"]}
 panic-halt = "0.2.0"
 rtt-target = "0.5.0"
