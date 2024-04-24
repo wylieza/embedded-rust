@@ -68,6 +68,10 @@ fn main() -> ! {
     rprintln!("Hello my chickens! Lets get the temperature");
     delay_ms(500);
 
+    loop {
+        delay_ms(300);
+        rprintln!("infinitely looping");
+    }
 
     let peripherals = hal::pac::Peripherals::take().unwrap();
     let mut temp = hal::Temp::new(peripherals.TEMP);
